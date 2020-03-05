@@ -22,10 +22,13 @@
 			<h:inputText value="#{usuarioController.usuario.email}" />	
 		</h:panelGrid>
 		<h:commandButton value="Incluir"
+			disabled="#{usuarioController.usuario.id != null}"
 			actionListener="#{usuarioController.incluir}" />
 		<h:commandButton value="Alterar"
+			disabled="#{usuarioController.usuario.id == null}"
 			actionListener="#{usuarioController.alterar}" />
 		<h:commandButton value="Excluir"
+			disabled="#{usuarioController.usuario.id == null}"
 			actionListener="#{usuarioController.remover}" />
 		<h:commandButton value="Limpar" 
 			actionListener="#{usuarioController.limpar}"/>		

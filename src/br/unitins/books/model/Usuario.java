@@ -1,6 +1,6 @@
 package br.unitins.books.model;
 
-public class Usuario implements Cloneable{
+public class Usuario extends Entity<Usuario>{
 
 	private Integer id;
 	private String nome;
